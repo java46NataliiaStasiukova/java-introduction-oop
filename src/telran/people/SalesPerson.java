@@ -16,6 +16,6 @@ public void setPercentPay(int persentPay) {
 }
 @Override
 public int computePay() {
-	return super.computePay() + Math.round(sales * percentPay) / 100;
+	return (int) (super.computePay() + Math.round(sales / 100.0 * percentPay));
 }
 }
